@@ -1,0 +1,14 @@
+{% extends "main/base.html" %}
+{% block title %}Home - Pink Skincare{% endblock %}
+{% block content %}
+{% load static %}
+<div class="text-center">
+    <h1 style="color:#ff69b4;">Welcome to Pink Skincare</h1>
+    <p style="font-size: 1.2rem; color: #444;">
+  ✨ Your glow begins here. Natural. Gentle. Beautiful. ✨
+</p>
+
+    <img src="{% static 'images/pink-beauty.jpg' %}" alt="Skincare Image" />
+
+</div>
+{% endblock %}

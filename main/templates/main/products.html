@@ -1,0 +1,126 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container py-5">
+    <h1 class="text-center mb-5">✨ Our Star Products ✨</h1>
+    <div class="row g-4">
+
+        <!-- 🔹 Static Products -->
+        <!-- 🔹 Static Products -->
+<div class="col-md-4 col-sm-6">
+    <div class="card product-card h-100 text-center">
+        <img src="{% static 'images/combo.jpeg' %}" class="product-img" alt="Wanderlust">
+        <div class="card-body">
+            <div class="brand">Wanderlust</div>
+            <p class="offer">Up to 50% Off<br><small>Free Gift on ₹799+</small></p>
+            <a href="{% url 'add_to_cart' 1 %}" class="btn btn-primary btn-sm mt-2">🛒 Add to Cart</a>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4 col-sm-6">
+    <div class="card product-card h-100 text-center">
+        <img src="{% static 'images/serum.webp' %}" class="product-img" alt="Glow Up Serum">
+        <div class="card-body">
+            <div class="brand">Glow Up Serum</div>
+            <p class="offer">Flat 40% Off<br><small>Buy 1 Get 1 Free</small></p>
+            <a href="{% url 'add_to_cart' 2 %}" class="btn btn-primary btn-sm mt-2">🛒 Add to Cart</a>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4 col-sm-6">
+    <div class="card product-card h-100 text-center">
+        <img src="{% static 'images/glow.avif' %}" class="product-img" alt="Rosy Moisturizer">
+        <div class="card-body">
+            <div class="brand">Rosy Moisturizer</div>
+            <p class="offer">30% Off<br><small>Free Delivery</small></p>
+            <a href="{% url 'add_to_cart' 3 %}" class="btn btn-primary btn-sm mt-2">🛒 Add to Cart</a>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4 col-sm-6">
+    <div class="card product-card h-100 text-center">
+        <img src="{% static 'images/toner.webp' %}" class="product-img" alt="Peach Cleanser">
+        <div class="card-body">
+            <div class="brand">Peach Cleanser</div>
+            <p class="offer">Save ₹200<br><small>On ₹599 Purchase</small></p>
+            <a href="{% url 'add_to_cart' 4 %}" class="btn btn-primary btn-sm mt-2">🛒 Add to Cart</a>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4 col-sm-6">
+    <div class="card product-card h-100 text-center">
+        <img src="{% static 'images/vitaminc.webp' %}" class="product-img" alt="Vitamin C Serum">
+        <div class="card-body">
+            <div class="brand">Vitamin C Serum</div>
+            <p class="offer">25% Off<br><small>Best for Brightening</small></p>
+            <a href="{% url 'add_to_cart' 5 %}" class="btn btn-primary btn-sm mt-2">🛒 Add to Cart</a>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4 col-sm-6">
+    <div class="card product-card h-100 text-center">
+        <img src="{% static 'images/facewash.webp' %}" class="product-img" alt="Hydra Face Wash">
+        <div class="card-body">
+            <div class="brand">Hydra Face Wash</div>
+            <p class="offer">15% Off<br><small>Great for Daily Use</small></p>
+            <a href="{% url 'add_to_cart' 6 %}" class="btn btn-primary btn-sm mt-2">🛒 Add to Cart</a>
+        </div>
+    </div>
+</div>
+
+
+        <!-- 🔹 Dynamic Products from Database -->
+        {% for product in products %}
+        <div class="col-md-4 col-sm-6">
+            <div class="card product-card h-100 text-center">
+                <img src="{{ product.image_url }}" class="product-img card-img-top" alt="{{ product.name }}">
+                <div class="card-body">
+                    <h5 class="brand">{{ product.name }}</h5>
+                    <p class="offer">₹{{ product.price }}<br><small>{{ product.description|truncatewords:15 }}</small></p>
+                    <a href="{% url 'add_to_cart' product.id %}" class="btn btn-primary btn-sm mt-2">🛒 Add to Cart</a>
+                    <a href="{% url 'add_to_wishlist' product.id %}" class="btn btn-outline-danger btn-sm mt-2">♡ Wishlist</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+    body {
+        background-color: #fff0f5;
+        font-family: 'Poppins', sans-serif;
+    }
+    .product-card {
+        border-radius: 20px;
+        border: none;
+        overflow: hidden;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        background-color: #ffffff;
+    }
+    .product-card:hover {
+        transform: translateY(-5px);
+    }
+    .product-img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+    .brand {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #d63384;
+    }
+    .offer {
+        color: #ff69b4;
+        font-size: 0.95rem;
+    }
+</style>
+{% endblock %}

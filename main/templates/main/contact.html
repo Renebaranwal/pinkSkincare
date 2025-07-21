@@ -1,0 +1,17 @@
+{% extends "main/base.html" %}
+{% block title %}Contact - Pink Skincare{% endblock %}
+{% block content %}
+<h2 class="text-center text-danger">Contact Us</h2>
+<form class="w-50 mx-auto">
+    <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Your Name">
+    </div>
+    <div class="mb-3">
+        <input type="email" class="form-control" placeholder="Your Email">
+    </div>
+    <div class="mb-3">
+        <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+    </div>
+    <button class="btn btn-danger w-100">Send Message</button>
+</form>
+{% endblock %}

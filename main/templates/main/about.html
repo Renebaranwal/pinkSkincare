@@ -1,0 +1,82 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container py-5">
+
+    <h2 class="text-center text-danger mb-4">About Us</h2>
+    <p class="text-center mb-5">
+        At Pink Skincare, we believe in the power of natural ingredients and gentle formulations. 
+        Our mission is to provide effective and affordable skincare solutions for all skin types, 
+        promoting confidence and self-care through quality products.
+    </p>
+
+    <!-- Mission and Vision -->
+    <div class="row mb-5">
+        <div class="col-md-6 text-center">
+            <h4>Our Mission</h4>
+            <p>To deliver effective, clean, and sustainable skincare solutions that inspire confidence and well-being.</p>
+        </div>
+        <div class="col-md-6 text-center">
+            <h4>Our Vision</h4>
+            <p>To become a trusted name in skincare by combining nature, science, and transparency.</p>
+        </div>
+    </div>
+
+    <!-- Our Story -->
+    <div class="mb-5 text-center">
+        <h4>Our Story</h4>
+        <p class="mx-auto" style="max-width: 700px;">
+            Pink Skincare started as a passion project by a group of skincare enthusiasts and tech innovators. 
+            Frustrated by the lack of affordable, natural skincare options, we set out to build a brand that blends 
+            tradition with technology. Today, Pink Skincare stands as a symbol of clean beauty and honest ingredients, 
+            built with love and care.
+        </p>
+    </div>
+
+    <!-- Core Values -->
+    <div class="mb-5">
+        <h4 class="text-center mb-4">Our Core Values</h4>
+        <div class="row text-center">
+            <div class="col-md-3">
+                <div class="p-3 border rounded bg-light">Natural Ingredients</div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-3 border rounded bg-light">Cruelty-Free</div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-3 border rounded bg-light">Paraben-Free</div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-3 border rounded bg-light">Made in India</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tech Stack Info -->
+    <div class="text-center mb-4">
+        <h5>Built with Passion & Technology</h5>
+        <p class="text-muted">This platform is powered by Django, REST APIs, Bootstrap, and secure authentication — ensuring performance and user trust.</p>
+    </div>
+
+    <!-- Sustainability Note -->
+    <div class="text-center mb-4">
+        <h5>Our Commitment to Sustainability</h5>
+        <p>We promote eco-conscious packaging and aim to reduce our environmental footprint at every stage of development and delivery.</p>
+    </div>
+
+    <!-- Inspirational Quote -->
+    <div class="container my-5">
+        <div class="p-4 rounded shadow text-center" style="background: linear-gradient(to right, #ffe4e1, #fff0f5); border-left: 6px solid #ff69b4;">
+            <h4 class="mb-3" style="font-family: 'Playfair Display', serif; color: #d63384;">
+                Skincare Wisdom
+            </h4>
+            <blockquote class="blockquote mb-0">
+                <p style="font-size: 1.2rem; font-style: italic;">“Invest in your skin. It’s going to represent you for a very long time.”</p>
+                <footer class="blockquote-footer mt-2 text-muted">Linden Tyler</footer>
+            </blockquote>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
