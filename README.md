@@ -1,8 +1,8 @@
 💖 PinkSkincare – E-Commerce Website for Skincare Products
-PinkSkincare is a full-stack e-commerce website built using Django and Django REST Framework on the backend and HTML/CSS/Bootstrap on the frontend. The platform allows users to register, browse skincare products, manage their cart and wishlist, and perform secure login/logout operations.
-🔧 Tech Stack
-Frontend:
+PinkSkincare is a full-stack e-commerce web application designed for skincare product shopping. It is built using Django and Django REST Framework on the backend, and styled with HTML, CSS, and Bootstrap on the frontend. The platform offers user registration, product browsing, cart and wishlist management, and secure login/logout functionalities.
 
+🔧 Tech Stack
+🖥️ Frontend:
 HTML5
 
 CSS3
@@ -11,41 +11,41 @@ Bootstrap 5
 
 JavaScript (Fetch API)
 
-Backend:
-
+🛠️ Backend:
 Django
 
 Django REST Framework
 
-SQLite (can be upgraded to PostgreSQL)
+SQLite (easily upgradable to PostgreSQL)
 
-Authentication:
+🔐 Authentication:
+Token-based authentication with Django REST Framework
 
-Token-based authentication using Django REST Framework
+📦 Key Features
+👤 User Functionality:
+User Registration and Login (via token-based authentication)
 
-📦 Features
-👤 User Features
-Register and Login (Token-based authentication)
+Browse Products — View a wide range of skincare items
 
-Browse all skincare products
+Product Details — View detailed information for each item
 
-Add/remove items from Cart
+Cart Management — Add or remove items from the shopping cart
 
-Add/remove items from Wishlist
+Wishlist — Save favorite products for later
 
-View product details
+Responsive Design — Mobile-friendly UI using Bootstrap
 
-Responsive UI with Bootstrap
+🛒 Cart & Wishlist System:
+Session-Based Cart — Tracks items per session, even without login
 
-🛒 Cart & Wishlist
-Session-based cart management
+Persistent Wishlist — Linked to user account for long-term storage
 
-Wishlist stored in user account
+Real-Time Quantity Updates — View total price and update item count
 
-Quantity and total price handling
-🔐 Authentication
-API-based user registration and login
+🔐 Authentication & Security:
+API-based User Registration & Login — Powered by Django REST Framework
 
-Logout functionality
+Logout Functionality — Secure token invalidation
 
-Role-based access support ready for admin/premium users (future scope)
+Role-Based Access — Backend structure supports future admin/premium roles
+
